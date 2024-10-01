@@ -404,6 +404,10 @@ code:not([class*="language-"]) {
         /* Smaller font size for code */
     }
 
+    code:not([class*="language-"]){
+        font-size: 16px;
+    }
+
     .copy-button {
         top: 5px;
         right: 5px;
