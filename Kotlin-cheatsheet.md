@@ -1,6 +1,6 @@
 ### Kotlin Cheat Sheet
 
-#### 1. **Basic Syntax**
+#### 1. Basic Syntax
 
 ```kotlin
 fun main() {
@@ -11,7 +11,7 @@ fun main() {
 - **fun**: Declares a function.
 - **println**: Prints to the console.
 
-#### 2. **Variables**
+#### 2. Variables
 
 ```kotlin
 val immutable = 42   // read-only variable (like `final` in Java)
@@ -21,7 +21,7 @@ var mutable = 43     // mutable variable
 - **val**: Immutable variable (cannot be reassigned).
 - **var**: Mutable variable (can be reassigned).
 
-#### 3. **Data Types**
+#### 3. Data Types
 
 Kotlin has the following basic data types:
 
@@ -41,7 +41,7 @@ val isKotlinFun: Boolean = true
 val name: String = "Kotlin"
 ```
 
-#### 4. **String Interpolation**
+#### 4. String Interpolation
 
 ```kotlin
 val name = "Kotlin"
@@ -52,7 +52,7 @@ println("2 + 2 is ${2 + 2}")
 - Use `$` to insert variables into strings.
 - Use `${}` for expressions inside strings.
 
-#### 5. **Conditionals**
+#### 5. Conditionals
 
 ```kotlin
 val a = 10
@@ -74,7 +74,7 @@ val result = when (grade) {
 
 - **when**: Kotlin’s version of switch-case.
 
-#### 6. **Loops**
+#### 6. Loops
 
 ```kotlin
 for (i in 1..5) {
@@ -104,7 +104,7 @@ do {
 
 - **do-while**: Similar to while, but checks condition after the first loop.
 
-#### 7. **Functions**
+#### 7. Functions
 
 ```kotlin
 fun add(a: Int, b: Int): Int {
@@ -120,7 +120,7 @@ fun subtract(a: Int, b: Int) = a - b
 
 - Single-expression functions can omit the `return` keyword.
 
-#### 8. **Nullable Types**
+#### 8. Nullable Types
 
 ```kotlin
 var nullableString: String? = null
@@ -133,7 +133,7 @@ nullableString?.length  // Safe call: returns length if non-null, else null.
 nullableString!!.length // Force call: throws NullPointerException if null.
 ```
 
-#### 9. **Elvis Operator**
+#### 9. Elvis Operator
 
 ```kotlin
 val len = nullableString?.length ?: 0
@@ -141,7 +141,7 @@ val len = nullableString?.length ?: 0
 
 - **?:** The Elvis operator returns the value on the left if it's not null, otherwise returns the value on the right.
 
-#### 10. **Classes and Objects**
+#### 10. Classes and Objects
 
 ```kotlin
 class Person(val name: String, var age: Int)
@@ -156,7 +156,7 @@ println(person.name)
 person.age = 26
 ```
 
-#### 11. **Inheritance**
+#### 11. Inheritance
 
 ```kotlin
 open class Animal {
@@ -175,7 +175,7 @@ class Dog : Animal() {
 - **open**: Allows the class/method to be overridden.
 - **override**: Overrides a method.
 
-#### 12. **Data Classes**
+#### 12. Data Classes
 
 ```kotlin
 data class User(val name: String, val age: Int)
@@ -189,7 +189,7 @@ println(user)           // User(name=John, age=30)
 val copyUser = user.copy(age = 35)
 ```
 
-#### 13. **Lambda Functions**
+#### 13. Lambda Functions
 
 ```kotlin
 val sum = { a: Int, b: Int -> a + b }
@@ -198,7 +198,7 @@ println(sum(10, 20))   // Output: 30
 
 - **{ parameters -> body }**: Lambda expression syntax.
 
-#### 14. **Higher-Order Functions**
+#### 14. Higher-Order Functions
 
 ```kotlin
 fun applyOperation(x: Int, y: Int, operation: (Int, Int) -> Int): Int {
@@ -209,7 +209,7 @@ println(applyOperation(3, 4, sum))  // Output: 7
 
 - Functions that take other functions as parameters or return them.
 
-#### 15. **Collections**
+#### 15. Collections
 
 ```kotlin
 val numbers = listOf(1, 2, 3)
@@ -234,7 +234,7 @@ val mutableMap = mutableMapOf("a" to 1, "b" to 2)
 
 - **mapOf**: Immutable map (key-value pairs).
 
-#### 16. **Extension Functions**
+#### 16. Extension Functions
 
 ```kotlin
 fun String.greet() {
@@ -245,7 +245,7 @@ fun String.greet() {
 
 - Adds new functionality to existing classes without modifying them.
 
-#### 17. **Sealed Classes**
+#### 17. Sealed Classes
 
 ```kotlin
 sealed class Result
@@ -255,7 +255,7 @@ class Failure(val error: String) : Result()
 
 - **sealed**: Restricts class inheritance to specific types within the same file.
 
-#### 18. **Coroutines (Basic)**
+#### 18. Coroutines (Basic)
 
 ```kotlin
 import kotlinx.coroutines.*
@@ -273,7 +273,7 @@ fun main() = runBlocking {
 - **runBlocking**: Blocks the current thread until the coroutine inside finishes.
 - **delay**: Suspends coroutine without blocking the thread.
 
-#### 19. **Exceptions**
+#### 19. Exceptions
 
 ```kotlin
 try {
@@ -288,7 +288,7 @@ try {
 - **try-catch**: Handles exceptions.
 - **finally**: Optional block that always executes.
 
-#### 20. **Generics**
+#### 20. Generics
 
 ```kotlin
 fun <T> genericFunc(item: T): T {
@@ -296,6 +296,6 @@ fun <T> genericFunc(item: T): T {
 }
 ```
 
-- **<T>**: Declares a generic type.
+- **< T >**: Declares a generic type.
 
 ---
